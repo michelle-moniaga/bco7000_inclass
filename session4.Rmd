@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 
 
-avocado<-read.csv("avocado.csv")
+avocado<-read_csv("avocado.csv")
 
 avocado%>%head()
 
