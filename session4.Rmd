@@ -9,6 +9,41 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+``` {r}
+
+
+library(tidyverse)
+
+
+avocado<-read.csv("avocado.csv")
+
+avocado%>%head()
+
+avocado<-avocado%>%
+  janitor::clean_names()
+``` 
+
+
 #Data wrangling exercises
 
 **WOW**
+
+`arrange()` for sorting variables
+
+```{r}
+avocado%>%
+  arrange(desc(average_price))%>%
+  head()
+```
+
+Let's 'select()'
+
+```{r}
+dim(avocado)
+
+
+
+avocado%>%
+  select(date, average_price,total_volume)
+
+```
